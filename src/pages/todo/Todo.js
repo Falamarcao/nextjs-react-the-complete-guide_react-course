@@ -1,4 +1,4 @@
-import TodoItem from "./components/TodoItem";
+import TodoItem from "../../components/todo/TodoItem";
 
 function Todo() {
   return (

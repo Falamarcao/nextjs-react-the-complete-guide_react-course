@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Backdrop from "./Backdrop";
 import Modal from "./Modal";
 
 import style from "./TodoItem.module.css";
@@ -28,7 +27,6 @@ function TodoItem(props) {
       {modalIsOpen && (
         <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
       )}
-      {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
     </div>
   );
 }
