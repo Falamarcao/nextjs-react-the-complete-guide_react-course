@@ -1,3 +1,5 @@
+import css from "./Modal.module.css";
+
 function Modal(props) {
   function cancelHandler() {
     props.onCancel();
@@ -7,9 +9,9 @@ function Modal(props) {
   }
 
   return (
-    <div className="modal">
+    <div className={css.modal}>
       <p>Are you sure?</p>
-      <button className="btn btn--alt" onClick={cancelHandler}>
+      <button className="btn btn-alt" onClick={cancelHandler}>
         Cancel
       </button>
       <button className="btn" onClick={confirmHandler}>

@@ -1,8 +1,11 @@
 import { useState } from "react";
+
 import Backdrop from "./Backdrop";
 import Modal from "./Modal";
 
-function Todo(props) {
+import style from "./TodoItem.module.css";
+
+function TodoItem(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function deleteHandler() {
@@ -14,9 +17,9 @@ function Todo(props) {
   }
 
   return (
-    <div className="card">
+    <div className={style.card}>
       <h2>{props.text}</h2>
-      <div className="actions">
+      <div className={style.actions}>
         <button className="btn" onClick={deleteHandler}>
           Delete
         </button>
@@ -30,4 +33,4 @@ function Todo(props) {
   );
 }
 
-export default Todo;
+export default TodoItem;
